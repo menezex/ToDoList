@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Css do Projeto-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JavaScript do Projeto-->
+    <script src="index.js" defer></script>
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="todoContainer">
+      <header>
+        <h1>Lista de Tarefas</h1>
+      </header>
+      <!-- Formulado para adicionar a tarefa-->
+      <form id="todoForm">
+        <p>Adicione a sua tarefa:</p>
+        <div class="formControl">
+          <input type="text" id="todoInput" placeholder="Qual sua tarefa?" />
+          <button type="submit">+</button>
+        </div>
+      </form>
+      <!-- Formulado para editar a tarefa ja adicionada-->
+      <form id="editForm" class="hide">
+        <p>Edite a sua tarefa:</p>
+        <div class="formControl">
+          <input type="text" id="editInput" />
+          <button type="submit">OK</button>
+        </div>
+        <button id="cancelEditBtn">Cancelar</button>
+      </form>
+      <!-- Seção de Pesquisa, aonde vamos procurar uma tarefa-->
+      <div id="toolBar">
+        <div id="search">
+          <h4>Pesquisar:</h4>
+          <form>
+            <input type="text" id="searchInput" placeholder="Buscar" />
+            <button id="eraseBtn">Limpar</button>
+          </form>
+        </div>
+        <!--Botão para filtrar/selecionar as tarefas, tanto como marcada, desmarcada-->
+        <div id="filter">
+          <h4>Filtrar:</h4>
+          <select id="filterSelect">
+            <option value="all">Todos</option>
+            <option value="done">Concluidos</option>
+            <option value="todo">Pendentes</option>
+          </select>
+        </div>
+      </div>
+      <!--Aqui aonde vai ficar as tarefas que fomos colocando-->
+      <div id="todoList"></div>
+    </div>
+  </body>
+</html>
